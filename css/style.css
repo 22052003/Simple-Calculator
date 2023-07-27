@@ -1,0 +1,120 @@
+/* Box Model Hack */
+*
+ {
+     -moz-box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after 
+{
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear 
+{
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body 
+{
+  font-family: Roboto;
+  font-size: 25px;
+  background: linear-gradient(to right, #D8BFD8,#696969);
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header 
+{
+
+}
+
+footer 
+{
+
+}
+
+.calculator 
+{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(5, 80px);
+  grid-template-rows: minmax(150px, auto) repeat(5, 80px);
+}
+
+.output 
+{
+  color: black;
+  background-color: #C0C0C0;
+  padding: 25px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  border: 10px solid #000000;
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.previous 
+{
+  font-size: 12px;
+}
+
+.current 
+{
+  font-size: 32px;
+}
+
+button 
+{
+  cursor: pointer;
+  color: #DCDCDC;
+  border: 4px solid #795548;
+  transition: all .07s ease;
+  outline: none;
+  margin: 2px;
+  border-radius: 20px;
+  background-color: #000000;
+}
+
+button:hover {
+  color: #F5FFFA;
+}
+
+button.pad {
+  background-color: #9e9e9e;
+}
+
+.thick {
+  grid-column: span 2;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.clicked {
+  transform: scale(0.8);
+  border-color: white;
+  background-color:#FA8072;
+}
+
+button.pad.clicked {
+  background-color: rgba(1, 1, 1, .40);
+}
